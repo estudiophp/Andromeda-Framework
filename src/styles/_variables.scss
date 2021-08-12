@@ -1,0 +1,43 @@
+// Colors
+$theme-primary: #0078d4;
+$theme-secondary: #323130;
+// Color - Variants
+$theme-primary-dark: darken($theme-primary, 10%);
+$theme-primary-light: lighten($theme-primary, 10%);
+
+$theme-secondary-dark: darken($theme-secondary, 10%);
+$theme-secondary-light: lighten($theme-secondary, 10%);
+
+$theme-colors: (
+        "primary": $theme-primary,
+        "primary-dark": $theme-primary-dark,
+        "primary-light": $theme-primary-light,
+        "secondary": $theme-secondary,
+        "secondary-dark": $theme-secondary-dark,
+        "secondary-light": $theme-secondary-light,
+);
+
+// Grays
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: (
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900
+);
