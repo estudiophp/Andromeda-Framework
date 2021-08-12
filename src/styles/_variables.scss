@@ -41,3 +41,22 @@ $grays: (
         "800": $gray-800,
         "900": $gray-900
 );
+
+// Borders
+$border-width: (
+        1: 1px,
+        2: 2px,
+        3: 3px,
+        4: 4px,
+        5: 5px
+);
+
+$border-radius: (
+        "small": .25rem,
+        "medium": .2rem,
+        "large": .3rem,
+        "pill": 50rem
+);
+
+$border-width-default: map-get($border-width, 1);
+$border-radius-default: map-get($border-radius, "small");
