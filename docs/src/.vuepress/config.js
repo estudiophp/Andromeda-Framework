@@ -41,10 +41,17 @@ module.exports = {
     sidebar: {
       '/guide/': [
         {
+          title: 'Theme',
+          collapsable: false,
+          children: [
+            'theme/Variables',
+          ]
+        },
+        {
           title: 'Utilities',
           collapsable: false,
           children: [
-            'utilities/Background', // 'docs/gettingStarted/README.md' if you renamed before
+            'utilities/Background',
           ]
         },
       ],

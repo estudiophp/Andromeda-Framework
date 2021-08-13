@@ -1,5 +1,5 @@
 <template>
-  <div class="background-primary margin-top-extra">
+  <div class="background-secondary-light margin-top-extra">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis doloremque dolores harum hic, nihil quis similique soluta veritatis! Architecto asperiores cupiditate debitis ea ipsa libero optio repellat saepe soluta voluptatem!
   </div>
 </template>
