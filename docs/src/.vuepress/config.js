@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'FluVue Framework',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -16,7 +16,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'theme-color', content: '#0078d4' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
@@ -36,26 +36,17 @@ module.exports = {
       {
         text: 'Guide',
         link: '/guide/',
-      },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
       }
     ],
     sidebar: {
       '/guide/': [
         {
-          title: 'Guide',
+          title: 'Utilities',
           collapsable: false,
           children: [
-            '',
-            'using-vue',
+            'utilities/Background', // 'docs/gettingStarted/README.md' if you renamed before
           ]
-        }
+        },
       ],
     }
   },
