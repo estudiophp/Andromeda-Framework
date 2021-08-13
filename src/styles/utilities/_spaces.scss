@@ -1,0 +1,57 @@
+@each $key, $size in $spaces {
+  // Margins
+  .margin-#{$key} {
+    margin: $size;
+  }
+
+  .margin-y-#{$key} {
+    @extend .margin-top-#{$key};
+    @extend .margin-bottom-#{$key};
+  }
+
+  .margin-x-#{$key} {
+    @extend .margin-right-#{$key};
+    @extend .margin-left-#{$key};
+  }
+
+  .margin-top-#{$key} {
+    margin-top: $size;
+  }
+  .margin-bottom-#{$key} {
+    margin-bottom: $size;
+  }
+  .margin-right-#{$key} {
+    margin-right: $size;
+  }
+  .margin-left-#{$key} {
+    margin-left: $size;
+  }
+
+  // Padding
+  .padding-#{$key} {
+    padding: $size;
+  }
+
+  .padding-y-#{$key} {
+    @extend .padding-top-#{$key};
+    @extend .padding-bottom-#{$key};
+  }
+
+  .padding-x-#{$key} {
+    @extend .padding-right-#{$key};
+    @extend .padding-left-#{$key};
+  }
+
+  .padding-top-#{$key} {
+    padding-top: $size;
+  }
+  .padding-bottom-#{$key} {
+    padding-bottom: $size;
+  }
+  .padding-right-#{$key} {
+    padding-right: $size;
+  }
+  .padding-left-#{$key} {
+    padding-left: $size;
+  }
+}

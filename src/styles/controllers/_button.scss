@@ -1,0 +1,5 @@
+@each $key, $color in $theme-base-colors {
+  .btn-#{$key} {
+    @include button($key);
+  }
+}

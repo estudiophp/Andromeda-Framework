@@ -1,0 +1,97 @@
+// Colors
+$theme-primary: #0078d4;
+$theme-secondary: #323130;
+// Color - Variants
+$theme-primary-dark: darken($theme-primary, 10%);
+$theme-primary-light: lighten($theme-primary, 10%);
+
+$theme-secondary-dark: darken($theme-secondary, 10%);
+$theme-secondary-light: lighten($theme-secondary, 10%);
+
+$theme-base-colors: (
+        "primary": $theme-primary,
+        "secondary": $theme-secondary,
+);
+
+$theme-colors: (
+        "primary": $theme-primary,
+        "primary-dark": $theme-primary-dark,
+        "primary-light": $theme-primary-light,
+        "secondary": $theme-secondary,
+        "secondary-dark": $theme-secondary-dark,
+        "secondary-light": $theme-secondary-light,
+);
+
+// Grays
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$grays: (
+        "white": $white,
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900,
+        "black": $black
+);
+
+// Borders
+$border-width: (
+        1: 1px,
+        2: 2px,
+        3: 3px,
+        4: 4px,
+        5: 5px
+);
+
+$border-radius: (
+        "small": .25rem,
+        "medium": .2rem,
+        "large": .3rem,
+        "pill": 50rem
+);
+
+$border-width-default: map-get($border-width, 1);
+$border-radius-default: map-get($border-radius, "small");
+
+// Spaces
+$spaces: (
+        "xsmall": .5rem,
+        "small": 1rem,
+        "medium": 2rem,
+        "large": 3rem,
+        "extra": 4rem,
+        "auto": auto
+);
+
+// Font
+$font-default: 'Segoe UI';
+
+// Text
+$text-size: (
+        small: 10px,
+        normal: 16px,
+        medium: 24px,
+        large: 32px,
+        extra: 42px
+);
+
+$text-weight: (
+        regular: 400,
+        semibold: 600,
+        bold: 700
+);
