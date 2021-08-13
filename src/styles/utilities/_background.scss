@@ -4,7 +4,7 @@
   }
 }
 @each $key, $color in $grays {
-  .background-#{$key} {
+  .background-gray-#{$key} {
     background: $color;
   }
 }

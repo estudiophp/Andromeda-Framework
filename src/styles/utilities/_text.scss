@@ -17,7 +17,7 @@
 }
 
 @each $key, $color in $grays {
-  .text-color-#{$key} {
+  .text-color-gray-#{$key} {
     color: $color;
   }
 }

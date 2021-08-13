@@ -21,7 +21,7 @@
 }
 
 @each $key, $color in $grays {
-  .border-color-gray-#{$color} {
+  .border-color-gray-#{$key} {
     border-color: $color;
   }
 }

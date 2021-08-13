@@ -1,6 +1,6 @@
 <template>
   <div style="display: flex;align-items: center;justify-content: center;height: 100vh">
-    <button class="btn-secondary">My Button</button>
+    <button class="btn-primary block" disabled>My Button</button>
   </div>
 </template>
 
@@ -15,5 +15,6 @@ export default defineComponent({
 <style>
 body {
   margin: 0;
+  padding: 10px;
 }
 </style>
