@@ -70,3 +70,18 @@ $spaces: (
 
 // Font
 $font-default: 'Segoe UI';
+
+// Text
+$text-size: (
+        small: 10px,
+        normal: 16px,
+        medium: 24px,
+        large: 32px,
+        extra: 42px
+);
+
+$text-weight: (
+        regular: 400,
+        semibold: 600,
+        bold: 700
+);
