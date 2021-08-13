@@ -52,6 +52,7 @@ module.exports = {
           collapsable: false,
           children: [
             'utilities/Background',
+            'utilities/Border'
           ]
         },
       ],
