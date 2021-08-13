@@ -19,6 +19,7 @@
     "dist/*",
     "src/**/*.vue"
   ],
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.14.6",
