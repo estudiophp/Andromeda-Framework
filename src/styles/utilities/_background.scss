@@ -1,10 +1,10 @@
 @each $key, $color in $theme-colors {
-  .flv-background-#{$key} {
+  .background-#{$key} {
     background: $color;
   }
 }
 @each $key, $color in $grays {
-  .flv-background-#{$key} {
+  .background-#{$key} {
     background: $color;
   }
 }

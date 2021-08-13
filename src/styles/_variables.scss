@@ -58,3 +58,14 @@ $border-radius: (
 
 $border-width-default: map-get($border-width, 1);
 $border-radius-default: map-get($border-radius, "small");
+
+// Spaces
+$spaces: (
+        "small": 1rem,
+        "medium": 2rem,
+        "large": 3rem,
+        "extra": 4rem
+);
+
+// Font
+$font-default: 'Segoe UI';
