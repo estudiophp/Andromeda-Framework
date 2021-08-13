@@ -57,3 +57,24 @@
 | medium | .2rem         |
 | large  | .3rem         |
 | pill   | 50rem         |
+
+## Text
+
+### Size
+
+| Key    | Default Vale |
+| ------ | ------------ |
+| small  | 10px         |
+| normal | 16px         |
+| medium | 24px         |
+| large  | 32px         |
+| extra  | 42px         |
+
+### Weight
+
+| Key      | Default Value |
+| -------- | ------------- |
+| regular  | 400           |
+| semibold | 600           |
+| bold     | 700           |
+
