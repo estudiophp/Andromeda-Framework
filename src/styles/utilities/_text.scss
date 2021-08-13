@@ -15,3 +15,9 @@
     color: $color;
   }
 }
+
+@each $key, $color in $grays {
+  .text-color-#{$key} {
+    color: $color;
+  }
+}

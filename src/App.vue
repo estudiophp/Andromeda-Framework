@@ -1,6 +1,6 @@
 <template>
-  <div class="background-secondary-light margin-top-extra">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis doloremque dolores harum hic, nihil quis similique soluta veritatis! Architecto asperiores cupiditate debitis ea ipsa libero optio repellat saepe soluta voluptatem!
+  <div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet culpa dolor dolorum eos expedita fugiat hic id iste, laudantium maiores, necessitatibus nulla odit officiis pariatur perspiciatis porro sequi sint.
   </div>
 </template>
 

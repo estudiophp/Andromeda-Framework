@@ -28,18 +28,18 @@
   }
 
   // Padding
-  padding-#{$key} {
-    margin: $size;
+  .padding-#{$key} {
+    padding: $size;
   }
 
   .padding-y-#{$key} {
-    @extend .margin-top-#{$key};
-    @extend .margin-bottom-#{$key};
+    @extend .padding-top-#{$key};
+    @extend .padding-bottom-#{$key};
   }
 
   .padding-x-#{$key} {
-    @extend .margin-right-#{$key};
-    @extend .margin-left-#{$key};
+    @extend .padding-right-#{$key};
+    @extend .padding-left-#{$key};
   }
 
   .padding-top-#{$key} {
