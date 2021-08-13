@@ -1,0 +1,17 @@
+@each $key, $size in $text-size {
+  .text-size-#{$key} {
+    font-size: $size;
+  }
+}
+
+@each $key, $weight in $text-weight {
+  .text-weight-#{$key} {
+    font-size: $weight;
+  }
+}
+
+@each $key, $color in $theme-colors {
+  .text-color-#{$key} {
+    color: $color;
+  }
+}
