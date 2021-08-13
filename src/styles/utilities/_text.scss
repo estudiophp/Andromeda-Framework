@@ -6,7 +6,7 @@
 
 @each $key, $weight in $text-weight {
   .text-weight-#{$key} {
-    font-size: $weight;
+    font-weight: $weight;
   }
 }
 

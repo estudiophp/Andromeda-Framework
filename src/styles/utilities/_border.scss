@@ -15,7 +15,7 @@
 }
 
 @each $key, $color in $theme-colors {
-  .border-color-#{key} {
+  .border-color-#{$key} {
     border-color: $color;
   }
 }

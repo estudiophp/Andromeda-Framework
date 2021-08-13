@@ -1,6 +1,6 @@
 <template>
-  <div>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet culpa dolor dolorum eos expedita fugiat hic id iste, laudantium maiores, necessitatibus nulla odit officiis pariatur perspiciatis porro sequi sint.
+  <div style="display: flex;align-items: center;justify-content: center;height: 100vh">
+    <button class="btn-secondary">My Button</button>
   </div>
 </template>
 
@@ -11,3 +11,9 @@ export default defineComponent({
   name: 'App'
 })
 </script>
+
+<style>
+body {
+  margin: 0;
+}
+</style>

@@ -8,6 +8,11 @@ $theme-primary-light: lighten($theme-primary, 10%);
 $theme-secondary-dark: darken($theme-secondary, 10%);
 $theme-secondary-light: lighten($theme-secondary, 10%);
 
+$theme-base-colors: (
+        "primary": $theme-primary,
+        "secondary": $theme-secondary,
+);
+
 $theme-colors: (
         "primary": $theme-primary,
         "primary-dark": $theme-primary-dark,
@@ -63,6 +68,7 @@ $border-radius-default: map-get($border-radius, "small");
 
 // Spaces
 $spaces: (
+        "xsmall": .5rem,
         "small": 1rem,
         "medium": 2rem,
         "large": 3rem,

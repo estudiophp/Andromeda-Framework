@@ -1,0 +1,16 @@
+@mixin button($color-key) {
+  @extend .background-#{$color-key};
+  @extend .padding-y-xsmall;
+  @extend .padding-x-small;
+  @extend .text-color-white;
+  @extend .text-weight-bold;
+  @extend .border-radius-small;
+  @extend .border;
+  @extend .border-color-#{$color-key};
+  transition: all .2s;
+  cursor: pointer;
+  &:hover {
+    @extend .border-color-#{$color-key}-dark;
+    background: map-get($theme-colors, "#{$color-key}-dark");
+  }
+}
