@@ -16,3 +16,11 @@
 </h1>
 ```
 
+## Weight
+
+```html
+<span class="text-weight-{key}">
+    Hello world
+</span>
+```
+
