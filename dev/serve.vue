@@ -12,6 +12,6 @@ export default defineComponent({
 <template>
   <div id="app">
     <flu-btn color="primary">Button</flu-btn>
-    <flu-checkbox label="Mi querido checkbox" v-model="checkModel"></flu-checkbox>
+    <flu-checkbox checked label="Mi querido checkbox" v-model="checkModel"></flu-checkbox>
   </div>
 </template>

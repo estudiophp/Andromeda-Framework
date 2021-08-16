@@ -22,7 +22,8 @@ export default defineComponent({
     modelValue: {
       type: Boolean,
       required: true
-    }
+    },
+    checked: Boolean
   },
   emits: ['update:modelValue'],
   setup(props, { emit }) {
@@ -32,6 +33,8 @@ export default defineComponent({
     {
       return emit('update:modelValue', newValue.target.checked)
     }
+
+    emit('update:modelValue', props.checked)
 
     return {value, updateValue};
   },
