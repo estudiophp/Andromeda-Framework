@@ -1,0 +1,43 @@
+@each $key, $color in $theme-base-colors {
+  .checkbox-#{$key} {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    height: 20px;
+    display: flex;
+    align-items: center;
+
+
+    .checkmark {
+      @extend .margin-right-xsmall;
+      background: $white;
+      @extend .border;
+      @extend .border-color-gray-500;
+      @extend .border-width-1;
+      transition: all .2s;
+      height: 20px;
+      position: relative;
+      width: 20px;
+      @extend .border-radius-small;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.checked {
+        @extend .background-primary;
+        @extend .border-color-primary;
+        color: $white;
+      }
+    }
+
+    input {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+  }
+
+}

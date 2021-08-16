@@ -2,6 +2,7 @@ import { App, Plugin } from 'vue';
 
 // Import vue components
 import '@/styles/main.scss'
+import 'material-design-icons/iconfont/material-icons.css'
 import * as components from '@/controllers';
 // TODO: Import styles for FluVue components
 
