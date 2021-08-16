@@ -1,0 +1,8 @@
+@mixin baseCheckAnChoice() {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}

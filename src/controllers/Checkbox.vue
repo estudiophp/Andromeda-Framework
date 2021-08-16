@@ -1,5 +1,5 @@
 <template>
-  <label :class="{ marked: value }" class="checkbox-primary margin-y-small">
+  <label :class="{ marked: value }" class="checkbox margin-y-small">
     <div class="checkmark" :class="{'checked': value}">
       <div v-if="value">
         <i class="material-icons" style="font-size: 14px">check</i>

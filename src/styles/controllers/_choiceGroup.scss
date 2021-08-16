@@ -1,4 +1,4 @@
-.checkbox {
+.choice-group-item {
   @include baseCheckAnChoice();
 
   .checkmark {
@@ -11,16 +11,20 @@
     height: 20px;
     position: relative;
     width: 20px;
-    @extend .border-radius-small;
+    @extend .border-radius-pill;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
 
     &.checked {
-      @extend .background-primary;
       @extend .border-color-primary;
-      color: $white;
+      div {
+        @extend .border-radius-pill;
+        @extend .background-primary;
+        width: 10px;
+        height: 10px;
+      }
     }
   }
 

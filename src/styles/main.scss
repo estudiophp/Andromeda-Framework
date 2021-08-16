@@ -8,7 +8,9 @@
 
 // Mixins
 @import "controllers/mixins/button";
+@import "controllers/mixins/baseCheckAndChoice";
 
 // Controllers
 @import "controllers/button";
 @import "controllers/checkbox";
+@import "controllers/choiceGroup";
