@@ -1,6 +1,12 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import { FluChoiceGroup, FluBtn, FluCheckbox, FluComboBox } from "@/controllers";
+import {
+  FluChoiceGroup,
+  FluBtn,
+  FluCheckbox,
+  FluComboBox,
+  FluLabel
+} from "@/controllers";
 
 export default defineComponent({
   name: "ServeDev",
@@ -8,7 +14,8 @@ export default defineComponent({
     FluChoiceGroup,
     FluBtn,
     FluCheckbox,
-    FluComboBox
+    FluComboBox,
+    FluLabel
   },
   data: () => ({
     checkModel: "",
@@ -41,23 +48,22 @@ export default defineComponent({
         }
       ]"
     ></flu-choice-group>
-
+    <flu-label size="normal">UwU</flu-label>
     <flu-combo-box
       v-model="comboValue"
-      label="Seleccione una opción"
+      placeholder="Seleccione una opción"
       :options="[
-        {label: 'Opción 01', value: 'option01'},
-        {label: 'Opción 02', value: 'option02'},
-        {label: 'Opción 03', value: 'option03'},
-        {label: 'Opción 04', value: 'option04'},
-        {label: 'Opción 05', value: 'option05'},
-        {label: 'Opción 06', value: 'option06'},
-        {label: 'Opción 07', value: 'option07'},
-        {label: 'Opción 08', value: 'option08'},
-        {label: 'Opción 09', value: 'option09'},
+        { text: 'Opción 01', value: 'option01' },
+        { text: 'Opción 02', value: 'option02' },
+        { text: 'Opción 03', value: 'option03' },
+        { text: 'Opción 04', value: 'option04' },
+        { text: 'Opción 05', value: 'option05' },
+        { text: 'Opción 06', value: 'option06' },
+        { text: 'Opción 07', value: 'option07' },
+        { text: 'Opción 08', value: 'option08' },
+        { text: 'Opción 09', value: 'option09' }
       ]"
     >
-
     </flu-combo-box>
   </div>
 </template>

@@ -6,7 +6,7 @@
       @click="optionsShow = !optionsShow"
     >
       <div>
-        {{ modelValue ? modelValue.label : label }}
+        {{ modelValue ? modelValue.text : placeholder }}
       </div>
       <div class="material-icons">
         expand_more
@@ -18,7 +18,7 @@
           :key="option"
           class="options-item"
         >
-          {{ option.label }}
+          {{ option.text }}
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@ export default defineComponent({
       type: Array
     },
     modelValue: Object,
-    label: String,
+    placeholder: String,
     block: Boolean
   },
   emits: ["update:modelValue"],
