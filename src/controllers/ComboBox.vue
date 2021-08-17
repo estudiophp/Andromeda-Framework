@@ -7,7 +7,7 @@
       @click="optionsShow = !optionsShow"
     >
       <div>
-        {{ modelValue ? modelValue.text : placeholder }}
+        {{ modelValue.length === 0 ? modelValue.text : placeholder }}
       </div>
       <div class="material-icons">
         expand_more

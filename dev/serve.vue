@@ -20,7 +20,7 @@ export default defineComponent({
   data: () => ({
     checkModel: "",
     choiceModel: "",
-    comboValue: ""
+    comboValue: {}
   })
 });
 </script>
