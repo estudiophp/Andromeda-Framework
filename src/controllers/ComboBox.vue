@@ -1,6 +1,10 @@
 <template>
   <div>
-    <div class="comboBox" @click="optionsShow = !optionsShow">
+    <div
+      class="comboBox"
+      :class="{ block: block }"
+      @click="optionsShow = !optionsShow"
+    >
       <div>
         {{ modelValue ? modelValue.label : label }}
       </div>
@@ -8,7 +12,12 @@
         expand_more
       </div>
       <div class="options-list" v-show="optionsShow">
-        <div v-for="option of options" @click="updateValue(option)" :key="option" class="options-item">
+        <div
+          v-for="option of options"
+          @click="updateValue(option)"
+          :key="option"
+          class="options-item"
+        >
           {{ option.label }}
         </div>
       </div>
@@ -27,18 +36,19 @@ export default defineComponent({
       type: Array
     },
     modelValue: Object,
-    label: String
+    label: String,
+    block: Boolean
   },
-  emits: ['update:modelValue'],
-  setup(props, {emit}) {
-    const inputValue = toRef(props, 'modelValue')
-    const optionsShow = ref(false)
+  emits: ["update:modelValue"],
+  setup(props, { emit }) {
+    const inputValue = toRef(props, "modelValue");
+    const optionsShow = ref(false);
 
     function updateValue(newValue: any) {
-      emit('update:modelValue', newValue)
+      emit("update:modelValue", newValue);
     }
 
-    return {inputValue, updateValue, optionsShow}
+    return { inputValue, updateValue, optionsShow };
   }
 });
 </script>
