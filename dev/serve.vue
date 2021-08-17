@@ -48,8 +48,8 @@ export default defineComponent({
         }
       ]"
     ></flu-choice-group>
-    <flu-label size="normal">UwU</flu-label>
     <flu-combo-box
+      label="Select Label"
       v-model="comboValue"
       placeholder="Seleccione una opción"
       :options="[

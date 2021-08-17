@@ -1,5 +1,6 @@
 <template>
   <div>
+    <flu-label v-if="label">{{ label }}</flu-label>
     <div
       class="comboBox"
       :class="{ block: block }"
@@ -27,10 +28,13 @@
 
 <script lang="ts">
 import { defineComponent, ref, toRef } from "vue";
+import {FluLabel} from '@/controllers'
 
 export default defineComponent({
   name: "ComboBox",
+  components: {FluLabel},
   props: {
+    label: String,
     options: {
       default: [],
       type: Array
