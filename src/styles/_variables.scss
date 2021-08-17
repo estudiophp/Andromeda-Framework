@@ -70,6 +70,7 @@ $border-radius-default: map-get($border-radius, "small");
 
 // Spaces
 $spaces: (
+        "xxsmall":  .3rem,
         "xsmall": .5rem,
         "small": 1rem,
         "medium": 2rem,
@@ -84,6 +85,7 @@ $font-default: 'Segoe UI';
 // Text
 $text-size: (
         small: 10px,
+        default: 13.3333px,
         normal: 16px,
         medium: 24px,
         large: 32px,

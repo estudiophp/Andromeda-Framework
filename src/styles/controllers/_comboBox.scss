@@ -1,0 +1,38 @@
+.comboBox {
+  @extend .border;
+  @extend .border-radius-small;
+  @extend .padding-y-xsmall;
+  @extend .padding-x-xsmall;
+  border-color: $gray-600;
+  border-width: 1.5px;
+  cursor: pointer;
+  max-width: 350px;
+  display: flex;
+  font-size: map-get($text-size, default);
+  justify-content: space-between;
+  position: relative;
+
+  &.block {
+    max-width: 100%;
+  }
+
+  .options-list {
+    max-width: 350px;
+    left: 0px;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    position: absolute;
+    @extend .border-radius-small;
+    box-shadow: $gray-400 0px 3.2px 7.2px 0px;
+    background: $white;
+
+    .options-item {
+      @extend .padding-y-small;
+      @extend .padding-x-small;
+      &:hover {
+        background: $gray-100;
+      }
+    }
+  }
+}
