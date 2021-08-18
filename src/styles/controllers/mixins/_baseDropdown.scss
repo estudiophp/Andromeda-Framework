@@ -1,0 +1,17 @@
+@mixin baseDropdown() {
+  @extend .border-radius-small;
+  max-width: 350px;
+  left: 0px;
+  top: 40px;
+  position: absolute;
+  box-shadow: $gray-400 0px 3.2px 7.2px 0px;
+  background: $white;
+}
+
+@mixin baseDropdownOption() {
+  @extend .padding-y-small;
+  @extend .padding-x-small;
+  &:hover {
+    background: $gray-100;
+  }
+}

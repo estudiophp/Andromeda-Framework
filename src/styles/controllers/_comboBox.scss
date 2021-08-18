@@ -17,23 +17,12 @@
   }
 
   .options-list {
-    max-width: 350px;
-    left: 0px;
-    top: 40px;
-    width: 100%;
+    @include baseDropdown();
     max-height: 300px;
     overflow-y: auto;
-    position: absolute;
-    @extend .border-radius-small;
-    box-shadow: $gray-400 0px 3.2px 7.2px 0px;
-    background: $white;
 
     .options-item {
-      @extend .padding-y-small;
-      @extend .padding-x-small;
-      &:hover {
-        background: $gray-100;
-      }
+      @include baseDropdownOption()
     }
   }
 }
