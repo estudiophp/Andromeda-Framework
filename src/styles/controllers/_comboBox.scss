@@ -15,15 +15,4 @@
   &.block {
     max-width: 100%;
   }
-
-  // TODO: Cambiar a OptionsList
-  /* .options-list {
-    @include baseDropdown();
-    max-height: 300px;
-    overflow-y: auto;
-
-    .options-item {
-      @include baseDropdownOption()
-    }
-  } */
 }

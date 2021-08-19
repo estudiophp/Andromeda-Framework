@@ -1,9 +1,9 @@
 <template>
   <div style="position: relative">
-    <div style="display: inline-block" @click="handleClickActivator">
+    <div @click="handleClickActivator">
       <slot name="Activator" />
     </div>
-    <div class="dropdown" v-show="isShow">
+    <div @click=handleClickActivator class="dropdown" v-show="isShow">
       <slot name="Content" />
     </div>
   </div>
