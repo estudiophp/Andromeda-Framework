@@ -8,7 +8,7 @@
     <span class="text-size-normal">
       {{ label }}
     </span>
-    <input :checked="value" @change="(e) => updateValue(e)" type="checkbox" checked="checked"/>
+    <input :checked="value" @change="updateValue" type="checkbox"/>
   </label>
 </template>
 

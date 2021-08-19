@@ -1,4 +1,4 @@
-@mixin baseDropdown() {
+@mixin baseList() {
   @extend .border-radius-small;
   max-width: 350px;
   width: 100%;
@@ -9,7 +9,7 @@
   background: $white;
 }
 
-@mixin baseDropdownOption() {
+@mixin baseListItem() {
   @extend .padding-y-small;
   @extend .padding-x-small;
   &:hover {

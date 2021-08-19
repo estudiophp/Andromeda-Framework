@@ -7,15 +7,17 @@
 @import "utilities/text";
 
 // Mixins
-@import "controllers/mixins/button";
-@import "controllers/mixins/baseCheckAndChoice";
-@import "controllers/mixins/baseDropdown";
+@import "mixins/button";
+@import "mixins/baseCheckAndChoice";
+@import "mixins/baseOptions";
 
 // Controllers
 @import "controllers/button";
 @import "controllers/checkbox";
 @import "controllers/choiceGroup";
 @import "controllers/comboBox";
+@import "controllers/dropdown";
+@import "controllers/list";
 
 body {
   font-family: $font-default;

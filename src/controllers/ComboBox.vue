@@ -12,7 +12,9 @@
       <div class="material-icons">
         expand_more
       </div>
-      <div class="options-list" v-show="optionsShow">
+
+      <!-- TODO: Cambiar a componente OptionsList -->
+      <!-- <div class="options-list" v-show="optionsShow">
         <div
           v-for="option of options"
           @click="updateValue(option)"
@@ -21,7 +23,7 @@
         >
           {{ option.text }}
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

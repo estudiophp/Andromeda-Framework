@@ -1,3 +1,9 @@
 .dropdown {
-  @include baseDropdown();
+  max-width: 350px;
+  width: 100%;
+  left: 0px;
+  top: 40px;
+  position: absolute;
+  box-shadow: $gray-400 0px 3.2px 7.2px 0px;
+  background: $white;
 }
