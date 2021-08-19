@@ -1,6 +1,7 @@
 @mixin baseDropdown() {
   @extend .border-radius-small;
   max-width: 350px;
+  width: 100%;
   left: 0px;
   top: 40px;
   position: absolute;
