@@ -6,7 +6,9 @@ import {
   FluCheckbox,
   FluComboBox,
   FluLabel,
-  FluDropdown
+  FluDropdown,
+  FluList,
+  FluListItem
 } from "@/controllers";
 
 export default defineComponent({
@@ -17,7 +19,9 @@ export default defineComponent({
     FluCheckbox,
     FluComboBox,
     FluLabel,
-    FluDropdown
+    FluDropdown,
+    FluList,
+    FluListItem
   },
   data: () => ({
     checkModel: "",
@@ -72,7 +76,9 @@ export default defineComponent({
         <flu-btn color="primary">Activator Dropdown</flu-btn>
       </template>
       <template v-slot:Content>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aspernatur omnis maxime accusantium incidunt odit iure quos voluptate. Officia consectetur ducimus vero perspiciatis iure quos dolor facere, quisquam dolorem illum?
+        <flu-list>
+          <flu-list-item>Item 01</flu-list-item>
+        </flu-list>
       </template>
     </flu-dropdown>
   </div>
