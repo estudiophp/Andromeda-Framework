@@ -15,4 +15,8 @@
 @import "controllers/button";
 @import "controllers/checkbox";
 @import "controllers/choiceGroup";
-@import "controllers/comboBox"
+@import "controllers/comboBox";
+
+body {
+  font-family: $font-default;
+}
