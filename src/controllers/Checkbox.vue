@@ -31,7 +31,7 @@ export default defineComponent({
 
     function updateValue(newValue: any)
     {
-      return emit('update:modelValue', newValue.target.checked)
+      emit('update:modelValue', newValue.target.checked)
     }
 
     emit('update:modelValue', props.checked)
