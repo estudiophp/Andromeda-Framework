@@ -1,13 +1,13 @@
 <template>
   <div>
-        <flu-label v-if="label">{{ label }}</flu-label>
+    <flu-label v-if="label">{{ label }}</flu-label>
     <flu-dropdown>
       <template v-slot:Activator>
         <div class="comboBox" :class="{ block: block }">
           <div>
             {{ modelValue.text || placeholder }}
           </div>
-          <div class="material-icons">
+          <div class="material-icons" style="font-size: 17px">
             expand_more
           </div>
         </div>
@@ -24,18 +24,6 @@
         </flu-list>
       </template>
     </flu-dropdown>
-
-    <!-- TODO: Cambiar a componente OptionsList -->
-    <!-- <div class="options-list" v-show="optionsShow">
-        <div
-          v-for="option of options"
-          @click="updateValue(option)"
-          :key="option"
-          class="options-item"
-        >
-          {{ option.text }}
-        </div>
-      </div> -->
   </div>
 </template>
 

@@ -8,7 +8,8 @@ import {
   FluLabel,
   FluDropdown,
   FluList,
-  FluListItem
+  FluListItem,
+  FluTextEntry
 } from "@/controllers";
 
 export default defineComponent({
@@ -21,12 +22,14 @@ export default defineComponent({
     FluLabel,
     FluDropdown,
     FluList,
-    FluListItem
+    FluListItem,
+    FluTextEntry
   },
   data: () => ({
     checkModel: "",
     choiceModel: "",
-    comboValue: {}
+    comboValue: {},
+    textEntryValue: ""
   })
 });
 </script>
@@ -81,5 +84,6 @@ export default defineComponent({
         </flu-list>
       </template>
     </flu-dropdown>
+    <flu-text-entry v-model="textEntryValue" class="margin-top-small" type="text" placeholder="Escriba su email"/>
   </div>
 </template>

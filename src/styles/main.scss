@@ -18,7 +18,12 @@
 @import "controllers/comboBox";
 @import "controllers/dropdown";
 @import "controllers/list";
+@import "controllers/textEntry";
 
 body {
   font-family: $font-default;
+}
+
+* {
+  outline: none;
 }

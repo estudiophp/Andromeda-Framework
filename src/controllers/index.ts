@@ -6,3 +6,4 @@ export { default as FluLabel } from "@/controllers/Label.vue";
 export { default as FluDropdown } from "@/controllers/Dropdown.vue";
 export { default as FluList } from "@/controllers/List/List.vue";
 export { default as FluListItem } from "@/controllers/List/ListItem.vue";
+export { default as FluTextEntry } from "@/controllers/TextEntry.vue";
