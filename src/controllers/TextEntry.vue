@@ -7,9 +7,9 @@
 
 <script lang="ts">
 import { FluLabel } from "@/controllers";
-import { toRef } from "@vue/reactivity";
+import { defineComponent, toRef } from "vue";
 
-export default {
+export default defineComponent({
   name: "TextEntry",
   components: {
     FluLabel
@@ -39,5 +39,5 @@ export default {
 
     return { handleInput, inputValue };
   }
-};
+});
 </script>
