@@ -75,15 +75,20 @@ export default defineComponent({
     >
     </flu-combo-box>
     <flu-dropdown class="margin-top-small">
-      <template v-slot:Activator>
+      <template v-slot:activator>
         <flu-btn color="primary">Activator Dropdown</flu-btn>
       </template>
-      <template v-slot:Content>
+      <template v-slot:content>
         <flu-list>
           <flu-list-item>Item 01</flu-list-item>
         </flu-list>
       </template>
     </flu-dropdown>
-    <flu-text-entry v-model="textEntryValue" class="margin-top-small" type="text" placeholder="Escriba su email"/>
+    <flu-text-entry
+      v-model="textEntryValue"
+      class="margin-top-small"
+      type="text"
+      placeholder="Escriba su email"
+    />
   </div>
 </template>
