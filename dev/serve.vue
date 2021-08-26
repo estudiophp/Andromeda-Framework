@@ -35,7 +35,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <flu-btn color="primary">Button</flu-btn>
     <flu-checkbox
       checked
