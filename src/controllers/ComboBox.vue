@@ -1,7 +1,15 @@
 <template>
   <div>
     <flu-label v-if="label">{{ label }}</flu-label>
-    <flu-dropdown>
+    <div v-if="readonly" class="comboBox" :class="{ block: block }">
+      <div>
+        {{ modelValue.text || placeholder }}
+      </div>
+      <div class="material-icons" style="font-size: 17px">
+        expand_more
+      </div>
+    </div>
+    <flu-dropdown v-else>
       <template v-slot:Activator>
         <div class="comboBox" :class="{ block: block }">
           <div>
@@ -39,6 +47,10 @@ export default defineComponent({
     options: {
       default: [],
       type: Array
+    },
+    readonly: {
+      type: Boolean,
+      default: false
     },
     modelValue: Object,
     placeholder: String,
