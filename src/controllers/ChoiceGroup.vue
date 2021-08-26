@@ -32,6 +32,10 @@ export default defineComponent({
     name: {
       required: true,
       type: String
+    },
+    readonly: {
+      type: Boolean,
+      default: false
     }
   },
   emits: ['update:modelValue'],
@@ -41,7 +45,7 @@ export default defineComponent({
     emit('update:modelValue', props.defaultValue)
 
     function updateValue(e: any) {
-      emit('update:modelValue', e.target.value)
+      if (!props.readonly) emit('update:modelValue', e.target.value)
     }
 
     return {updateValue, inputValue}
