@@ -1,7 +1,14 @@
 <template>
   <div>
     <flu-label v-if="label !== '' || label">{{ label }}</flu-label>
-    <input @input="handleInput" :value="inputValue" :placeholder="placeholder" :type="type" class="textEntry" />
+    <input
+      :readonly="readonly"
+      @input="handleInput"
+      :value="inputValue"
+      :placeholder="placeholder"
+      :type="type"
+      class="textEntry"
+    />
   </div>
 </template>
 
@@ -23,6 +30,10 @@ export default defineComponent({
     label: {
       type: String,
       default: ""
+    },
+    readonly: {
+      type: Boolean,
+      default: false
     },
     placeholder: {
       type: String,
