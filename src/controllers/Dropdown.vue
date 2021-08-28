@@ -1,10 +1,10 @@
 <template>
   <div style="position: relative">
     <div @click="handleClickActivator">
-      <slot name="Activator" />
+      <slot name="activator" />
     </div>
     <div @click=handleClickActivator class="dropdown" v-show="isShow">
-      <slot name="Content" />
+      <slot name="content" />
     </div>
   </div>
 </template>

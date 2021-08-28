@@ -2,7 +2,7 @@
   <div>
     <flu-label v-if="label">{{ label }}</flu-label>
     <flu-dropdown>
-      <template v-slot:Activator>
+      <template v-slot:activator>
         <div class="comboBox" :class="{ block: block }">
           <div>
             {{ modelValue.text || placeholder }}
@@ -12,7 +12,7 @@
           </div>
         </div>
       </template>
-      <template v-slot:Content>
+      <template v-slot:content>
         <flu-list>
           <flu-list-item
             v-for="option of options"
@@ -39,6 +39,10 @@ export default defineComponent({
     options: {
       default: [],
       type: Array
+    },
+    readonly: {
+      type: Boolean,
+      default: false
     },
     modelValue: Object,
     placeholder: String,

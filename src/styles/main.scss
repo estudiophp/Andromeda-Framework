@@ -1,10 +1,12 @@
 @import "variables";
+@import "global";
 
 // Utilities
 @import "utilities/background";
 @import "utilities/border";
 @import "utilities/spaces";
 @import "utilities/text";
+@import "utilities/container";
 
 // Mixins
 @import "mixins/button";
@@ -19,11 +21,3 @@
 @import "controllers/dropdown";
 @import "controllers/list";
 @import "controllers/textEntry";
-
-body {
-  font-family: $font-default;
-}
-
-* {
-  outline: none;
-}

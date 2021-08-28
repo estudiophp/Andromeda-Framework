@@ -1,15 +1,22 @@
 <template>
   <div>
     <flu-label v-if="label !== '' || label">{{ label }}</flu-label>
-    <input @input="handleInput" :value="inputValue" :placeholder="placeholder" :type="type" class="textEntry" />
+    <input
+      :readonly="readonly"
+      @input="handleInput"
+      :value="inputValue"
+      :placeholder="placeholder"
+      :type="type"
+      class="textEntry"
+    />
   </div>
 </template>
 
 <script lang="ts">
 import { FluLabel } from "@/controllers";
-import { toRef } from "@vue/reactivity";
+import { defineComponent, toRef } from "vue";
 
-export default {
+export default defineComponent({
   name: "TextEntry",
   components: {
     FluLabel
@@ -23,6 +30,10 @@ export default {
     label: {
       type: String,
       default: ""
+    },
+    readonly: {
+      type: Boolean,
+      default: false
     },
     placeholder: {
       type: String,
@@ -39,5 +50,5 @@ export default {
 
     return { handleInput, inputValue };
   }
-};
+});
 </script>

@@ -1,6 +1,6 @@
 <template>
   <label :class="{ marked: value }" class="checkbox margin-y-small">
-    <div class="checkmark" :class="{'checked': value}">
+    <div class="checkmark" :class="{ checked: value }">
       <div v-if="value">
         <i class="material-icons" style="font-size: 14px">check</i>
       </div>
@@ -8,12 +8,12 @@
     <span class="text-size-normal">
       {{ label }}
     </span>
-    <input :checked="value" @change="updateValue" type="checkbox"/>
+    <input :checked="value" @change="updateValue" type="checkbox" />
   </label>
 </template>
 
 <script lang="ts">
-import {defineComponent, toRef} from "vue";
+import { defineComponent, toRef } from "vue";
 
 export default defineComponent({
   name: "Checkbox",
@@ -23,20 +23,23 @@ export default defineComponent({
       type: Boolean,
       required: true
     },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
     checked: Boolean
   },
-  emits: ['update:modelValue'],
+  emits: ["update:modelValue"],
   setup(props, { emit }) {
-    let value = toRef(props, 'modelValue');
+    let value = toRef(props, "modelValue");
 
-    function updateValue(newValue: any)
-    {
-      emit('update:modelValue', newValue.target.checked)
+    function updateValue(newValue: any) {
+      if (!props.readonly) emit("update:modelValue", newValue.target.checked);
     }
 
-    emit('update:modelValue', props.checked)
+    emit("update:modelValue", props.checked);
 
-    return {value, updateValue};
-  },
+    return { value, updateValue };
+  }
 });
 </script>

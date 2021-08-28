@@ -57,6 +57,13 @@ module.exports = {
             'utilities/Text',
           ]
         },
+        {
+          title: 'Controllers',
+          collapsable: false,
+          children: [
+            'controllers/Button'
+          ]
+        },
       ],
     }
   },
