@@ -7,3 +7,5 @@ export { default as FluDropdown } from "@/controllers/Dropdown.vue";
 export { default as FluList } from "@/controllers/List/List.vue";
 export { default as FluListItem } from "@/controllers/List/ListItem.vue";
 export { default as FluTextEntry } from "@/controllers/TextEntry.vue";
+export { default as FluCard } from '@/controllers/Card/Card.vue'
+export { default as FluCardSection } from '@/controllers/Card/CardSection.vue'

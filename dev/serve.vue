@@ -9,7 +9,9 @@ import {
   FluDropdown,
   FluList,
   FluListItem,
-  FluTextEntry
+  FluTextEntry,
+  FluCard,
+  FluCardSection
 } from "@/controllers";
 
 export default defineComponent({
@@ -23,7 +25,9 @@ export default defineComponent({
     FluDropdown,
     FluList,
     FluListItem,
-    FluTextEntry
+    FluTextEntry,
+    FluCard,
+    FluCardSection
   },
   data: () => ({
     checkModel: "",
@@ -90,5 +94,11 @@ export default defineComponent({
       type="text"
       placeholder="Escriba su email"
     />
+    <flu-card class="margin-y-small">
+      <flu-card-section>
+        <h3>Lorem, ipsum dolor.</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus fuga ipsum, eligendi animi magni alias doloremque asperiores odit omnis sint esse nam iusto ducimus nostrum reprehenderit aliquam, harum id?
+      </flu-card-section>
+    </flu-card>
   </div>
 </template>
