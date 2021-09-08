@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from "vue";
+import {defineComponent} from "vue";
 import {
   FluChoiceGroup,
   FluBtn,
@@ -37,7 +37,8 @@ export default defineComponent({
     checkModel: "",
     choiceModel: "",
     comboValue: {},
-    textEntryValue: ""
+    textEntryValue: "",
+    dialogShow: false
   })
 });
 </script>
@@ -101,17 +102,36 @@ export default defineComponent({
     <flu-card class="margin-y-small">
       <flu-card-section>
         <h3>Lorem, ipsum dolor.</h3>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus fuga ipsum, eligendi animi magni alias doloremque asperiores odit omnis sint esse nam iusto ducimus nostrum reprehenderit aliquam, harum id?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus fuga ipsum, eligendi animi magni alias
+        doloremque asperiores odit omnis sint esse nam iusto ducimus nostrum reprehenderit aliquam, harum id?
       </flu-card-section>
     </flu-card>
     <flu-link to="/app">
       Lorem ipsum dolor sit amet.
     </flu-link>
-    <flu-overlay>
+    <div class="margin-top-small">
+      <flu-btn
+        color="primary"
+        @click="dialogShow = !dialogShow"
+      >
+        Open Dialog
+      </flu-btn>
+    </div>
+    <flu-overlay :show="dialogShow">
       <flu-card flat class="background-gray-white">
         <flu-card-section>
           <h3>Lorem, ipsum dolor.</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus fuga ipsum, eligendi animi magni alias doloremque asperiores odit omnis sint esse nam iusto ducimus nostrum reprehenderit aliquam, harum id?
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae consectetur error eum harum, id
+            laudantium libero maiores nobis repellat, reprehenderit soluta tenetur voluptatum! Alias asperiores ea
+            maiores odit quaerat.
+          </p>
+          <flu-btn
+            color="primary"
+            @click="dialogShow = !dialogShow"
+          >
+            Close Dialog
+          </flu-btn>
         </flu-card-section>
       </flu-card>
     </flu-overlay>

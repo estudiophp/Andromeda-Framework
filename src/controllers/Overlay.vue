@@ -1,5 +1,5 @@
 <template>
-  <div class="overlay">
+  <div class="overlay" v-show="show">
     <slot/>
   </div>
 </template>
@@ -8,7 +8,13 @@
 import {defineComponent} from "vue";
 
 export default defineComponent({
-  name: "Overlay"
+  name: "Overlay",
+  props: {
+    show: {
+      type: Boolean,
+      default: false
+    }
+  }
 })
 </script>
 
