@@ -5,7 +5,7 @@
         <i class="material-icons" style="font-size: 14px">check</i>
       </div>
     </div>
-    <span class="text-size-normal">
+    <span class="text-size-default">
       {{ label }}
     </span>
     <input :checked="value" @change="updateValue" type="checkbox" />

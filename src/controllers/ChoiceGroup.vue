@@ -11,7 +11,7 @@
         >
         </div>
       </div>
-      <span class="text-size-normal">{{ item.label }}</span>
+      <span class="text-size-default">{{ item.label }}</span>
     </label>
   </div>
 </template>
