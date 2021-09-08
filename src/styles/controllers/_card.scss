@@ -6,6 +6,10 @@
     max-width: 100%;
   }
 
+  &.flat {
+    box-shadow: none;
+  }
+
   .card-section {
     @extend .padding-x-small;
     @extend .padding-y-small;

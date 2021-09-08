@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :class="{'block': block}">
+  <div class="card" :class="{'block': block, 'flat': flat}">
     <slot/>
   </div>
 </template>
@@ -11,6 +11,10 @@ export default defineComponent({
   name: 'Card',
   props: {
     block: {
+      default: false,
+      type: Boolean
+    },
+    flat: {
       default: false,
       type: Boolean
     }
