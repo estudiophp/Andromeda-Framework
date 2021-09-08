@@ -11,7 +11,8 @@ import {
   FluListItem,
   FluTextEntry,
   FluCard,
-  FluCardSection
+  FluCardSection,
+  FluLink
 } from "@/controllers";
 
 export default defineComponent({
@@ -27,7 +28,8 @@ export default defineComponent({
     FluListItem,
     FluTextEntry,
     FluCard,
-    FluCardSection
+    FluCardSection,
+    FluLink
   },
   data: () => ({
     checkModel: "",
@@ -100,5 +102,8 @@ export default defineComponent({
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus fuga ipsum, eligendi animi magni alias doloremque asperiores odit omnis sint esse nam iusto ducimus nostrum reprehenderit aliquam, harum id?
       </flu-card-section>
     </flu-card>
+    <flu-link to="/app">
+      Lorem ipsum dolor sit amet.
+    </flu-link>
   </div>
 </template>
