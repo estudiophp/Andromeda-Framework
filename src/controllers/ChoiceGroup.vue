@@ -44,8 +44,8 @@ export default defineComponent({
 
     emit('update:modelValue', props.defaultValue)
 
-    function updateValue(e: any) {
-      if (!props.readonly) emit('update:modelValue', e.target.value)
+    function updateValue(event: any) {
+      if (!props.readonly) emit('update:modelValue', event.target.value)
     }
 
     return {updateValue, inputValue}
