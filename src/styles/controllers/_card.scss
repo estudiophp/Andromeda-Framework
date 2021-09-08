@@ -1,6 +1,7 @@
 .card {
   box-shadow: $gray-400 0px 3.2px 7.2px 0px;
   max-width: 450px;
+  @extend .border-radius-small;
   &.block {
     max-width: 100%;
   }
