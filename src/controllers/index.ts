@@ -10,3 +10,4 @@ export { default as FluTextEntry } from "@/controllers/TextEntry.vue";
 export { default as FluCard } from '@/controllers/Card/Card.vue'
 export { default as FluCardSection } from '@/controllers/Card/CardSection.vue'
 export { default as FluLink } from '@/controllers/Link.vue'
+export { default as FluOverlay } from '@/controllers/Overlay.vue'

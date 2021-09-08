@@ -12,7 +12,8 @@ import {
   FluTextEntry,
   FluCard,
   FluCardSection,
-  FluLink
+  FluLink,
+  FluOverlay
 } from "@/controllers";
 
 export default defineComponent({
@@ -29,7 +30,8 @@ export default defineComponent({
     FluTextEntry,
     FluCard,
     FluCardSection,
-    FluLink
+    FluLink,
+    FluOverlay
   },
   data: () => ({
     checkModel: "",
@@ -105,5 +107,6 @@ export default defineComponent({
     <flu-link to="/app">
       Lorem ipsum dolor sit amet.
     </flu-link>
+    <flu-overlay/>
   </div>
 </template>
