@@ -1,43 +1,48 @@
 <template>
   <div>
     <flu-label v-if="label">{{ label }}</flu-label>
-    <div
-      class="comboBox"
-      :class="{ block: block }"
-      @click="optionsShow = !optionsShow"
-    >
-      <div>
-        {{ modelValue.length === 0 ? modelValue.text : placeholder }}
-      </div>
-      <div class="material-icons">
-        expand_more
-      </div>
-      <div class="options-list" v-show="optionsShow">
-        <div
-          v-for="option of options"
-          @click="updateValue(option)"
-          :key="option"
-          class="options-item"
-        >
-          {{ option.text }}
+    <flu-dropdown>
+      <template v-slot:activator>
+        <div class="comboBox" :class="{ block: block }">
+          <div>
+            {{ modelValue.text || placeholder }}
+          </div>
+          <div class="material-icons" style="font-size: 17px">
+            expand_more
+          </div>
         </div>
-      </div>
-    </div>
+      </template>
+      <template v-slot:content>
+        <flu-list>
+          <flu-list-item
+            v-for="option of options"
+            :key="option"
+            @click="updateValue(option)"
+          >
+            {{ option.text }}
+          </flu-list-item>
+        </flu-list>
+      </template>
+    </flu-dropdown>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, toRef } from "vue";
-import {FluLabel} from '@/controllers'
+import { FluLabel, FluDropdown, FluListItem, FluList } from "@/controllers";
 
 export default defineComponent({
   name: "ComboBox",
-  components: {FluLabel},
+  components: { FluDropdown, FluLabel, FluList, FluListItem },
   props: {
     label: String,
     options: {
       default: [],
       type: Array
+    },
+    readonly: {
+      type: Boolean,
+      default: false
     },
     modelValue: Object,
     placeholder: String,

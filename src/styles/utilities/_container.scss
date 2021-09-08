@@ -1,0 +1,7 @@
+.container {
+  max-width: 1200px;
+  @extend .padding-y-small;
+  @extend .padding-x-small;
+  margin-left: auto;
+  margin-right: auto;
+}

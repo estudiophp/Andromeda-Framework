@@ -1,11 +1,19 @@
 <script lang="ts">
-import { defineComponent } from "vue";
+import {defineComponent} from "vue";
 import {
   FluChoiceGroup,
   FluBtn,
   FluCheckbox,
   FluComboBox,
-  FluLabel
+  FluLabel,
+  FluDropdown,
+  FluList,
+  FluListItem,
+  FluTextEntry,
+  FluCard,
+  FluCardSection,
+  FluLink,
+  FluOverlay
 } from "@/controllers";
 
 export default defineComponent({
@@ -15,18 +23,28 @@ export default defineComponent({
     FluBtn,
     FluCheckbox,
     FluComboBox,
-    FluLabel
+    FluLabel,
+    FluDropdown,
+    FluList,
+    FluListItem,
+    FluTextEntry,
+    FluCard,
+    FluCardSection,
+    FluLink,
+    FluOverlay
   },
   data: () => ({
     checkModel: "",
     choiceModel: "",
-    comboValue: {}
+    comboValue: {},
+    textEntryValue: "",
+    dialogShow: false
   })
 });
 </script>
 
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <flu-btn color="primary">Button</flu-btn>
     <flu-checkbox
       checked
@@ -65,5 +83,57 @@ export default defineComponent({
       ]"
     >
     </flu-combo-box>
+    <flu-dropdown class="margin-top-small">
+      <template v-slot:activator>
+        <flu-btn color="primary">Activator Dropdown</flu-btn>
+      </template>
+      <template v-slot:content>
+        <flu-list>
+          <flu-list-item>Item 01</flu-list-item>
+        </flu-list>
+      </template>
+    </flu-dropdown>
+    <flu-text-entry
+      v-model="textEntryValue"
+      class="margin-top-small"
+      type="text"
+      placeholder="Escriba su email"
+    />
+    <flu-card class="margin-y-small">
+      <flu-card-section>
+        <h3>Lorem, ipsum dolor.</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus fuga ipsum, eligendi animi magni alias
+        doloremque asperiores odit omnis sint esse nam iusto ducimus nostrum reprehenderit aliquam, harum id?
+      </flu-card-section>
+    </flu-card>
+    <flu-link to="/app">
+      Lorem ipsum dolor sit amet.
+    </flu-link>
+    <div class="margin-top-small">
+      <flu-btn
+        color="primary"
+        @click="dialogShow = !dialogShow"
+      >
+        Open Dialog
+      </flu-btn>
+    </div>
+    <flu-overlay :show="dialogShow">
+      <flu-card flat class="background-gray-white">
+        <flu-card-section>
+          <h3>Lorem, ipsum dolor.</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae consectetur error eum harum, id
+            laudantium libero maiores nobis repellat, reprehenderit soluta tenetur voluptatum! Alias asperiores ea
+            maiores odit quaerat.
+          </p>
+          <flu-btn
+            color="primary"
+            @click="dialogShow = !dialogShow"
+          >
+            Close Dialog
+          </flu-btn>
+        </flu-card-section>
+      </flu-card>
+    </flu-overlay>
   </div>
 </template>

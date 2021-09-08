@@ -7,6 +7,7 @@
   @extend .border-radius-small;
   @extend .border;
   @extend .border-color-#{$color-key};
+  font-size: 12px;
   transition: all .2s;
   cursor: pointer;
   &.block {

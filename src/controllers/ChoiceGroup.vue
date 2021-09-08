@@ -11,7 +11,7 @@
         >
         </div>
       </div>
-      <span class="text-size-normal">{{ item.label }}</span>
+      <span class="text-size-default">{{ item.label }}</span>
     </label>
   </div>
 </template>
@@ -32,6 +32,10 @@ export default defineComponent({
     name: {
       required: true,
       type: String
+    },
+    readonly: {
+      type: Boolean,
+      default: false
     }
   },
   emits: ['update:modelValue'],
@@ -40,8 +44,8 @@ export default defineComponent({
 
     emit('update:modelValue', props.defaultValue)
 
-    function updateValue(e: any) {
-      emit('update:modelValue', e.target.value)
+    function updateValue(event: any) {
+      if (!props.readonly) emit('update:modelValue', event.target.value)
     }
 
     return {updateValue, inputValue}

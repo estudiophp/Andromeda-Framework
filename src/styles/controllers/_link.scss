@@ -1,0 +1,6 @@
+.link {
+  @extend .text-color-primary;
+  @extend .text-size-default;
+  text-decoration: underline;
+  cursor: pointer;
+}

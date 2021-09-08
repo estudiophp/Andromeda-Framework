@@ -1,0 +1,12 @@
+@mixin baseList() {
+
+}
+
+@mixin baseListItem() {
+  @extend .padding-y-small;
+  @extend .padding-x-small;
+  cursor: pointer;
+  &:hover {
+    background: $gray-100;
+  }
+}
