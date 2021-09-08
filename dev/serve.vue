@@ -107,6 +107,13 @@ export default defineComponent({
     <flu-link to="/app">
       Lorem ipsum dolor sit amet.
     </flu-link>
-    <flu-overlay/>
+    <flu-overlay>
+      <flu-card class="background-gray-white">
+        <flu-card-section>
+          <h3>Lorem, ipsum dolor.</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus fuga ipsum, eligendi animi magni alias doloremque asperiores odit omnis sint esse nam iusto ducimus nostrum reprehenderit aliquam, harum id?
+        </flu-card-section>
+      </flu-card>
+    </flu-overlay>
   </div>
 </template>
