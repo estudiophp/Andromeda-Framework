@@ -33,8 +33,8 @@ export default defineComponent({
   setup(props, { emit }) {
     let value = toRef(props, "modelValue");
 
-    function updateValue(newValue: any) {
-      if (!props.readonly) emit("update:modelValue", newValue.target.checked);
+    function updateValue(event: any) {
+      if (!props.readonly) emit("update:modelValue", event.target.checked);
     }
 
     emit("update:modelValue", props.checked);
