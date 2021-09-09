@@ -2,6 +2,7 @@ import { App, Plugin } from 'vue';
 
 // Import vue components
 import 'material-design-icons/iconfont/material-icons.css'
+import './styles/main.scss'
 import * as components from '@/controllers';
 
 // install function executed by Vue.use()
