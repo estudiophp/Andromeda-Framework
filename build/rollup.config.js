@@ -7,11 +7,12 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import babel from '@rollup/plugin-babel';
-import PostCSS from 'rollup-plugin-postcss';
-import { terser } from 'rollup-plugin-terser';
+import {terser} from 'rollup-plugin-terser';
 import ttypescript from 'ttypescript';
 import typescript from 'rollup-plugin-typescript2';
 import minimist from 'minimist';
+import scss from "rollup-plugin-scss";
+import css from 'rollup-plugin-css-only'
 
 // Get browserslist config and remove ie from es build targets
 const esbrowserslist = fs.readFileSync('./.browserslistrc')
@@ -40,24 +41,39 @@ const baseConfig = {
         ],
       }),
     ],
+    css: {
+      output: {
+        file: 'dist/flu-vue-framework.min.css'
+      }
+    },
+    scss: {
+      output: {
+        file: 'dist/flu-vue-framework.min.css'
+      }
+    },
     replace: {
       'process.env.NODE_ENV': JSON.stringify('production'),
     },
     vue: {
+      preprocessStyles: true
     },
     postVue: [
       resolve({
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue'],
       }),
-      // Process only `<style module>` blocks.
-      PostCSS({
-        modules: {
-          generateScopedName: '[local]___[hash:base64:5]',
-        },
-        include: /&module=.*\.css$/,
+      scss({
+        output: '../src/styles/main.scss',
+        failOnError: true
       }),
+      // Process only `<style module>` blocks.
+      // PostCSS({
+      //   modules: {
+      //     generateScopedName: '[local]___[hash:base64:5]',
+      //   },
+      //   include: /&module=.*\.css$/,
+      // }),
       // Process all `<style>` blocks except `<style module>`.
-      PostCSS({ include: /(?<!&module=.*)\.css$/ }),
+      // PostCSS({include: /(?<!&module=.*)\.css$/}),
       commonjs(),
     ],
     babel: {
@@ -99,7 +115,10 @@ if (!argv.format || argv.format === 'es') {
     plugins: [
       replace(baseConfig.plugins.replace),
       ...baseConfig.plugins.preVue,
-      vue(baseConfig.plugins.vue),
+      vue({
+        css: true
+      }),
+      scss(),
       ...baseConfig.plugins.postVue,
       // Only use typescript for declarations - babel will
       // do actual js transformations
@@ -140,7 +159,10 @@ if (!argv.format || argv.format === 'cjs') {
     plugins: [
       replace(baseConfig.plugins.replace),
       ...baseConfig.plugins.preVue,
-      vue(baseConfig.plugins.vue),
+      vue({
+        css: true
+      }),
+      scss(),
       ...baseConfig.plugins.postVue,
       babel(baseConfig.plugins.babel),
     ],
@@ -163,7 +185,10 @@ if (!argv.format || argv.format === 'iife') {
     plugins: [
       replace(baseConfig.plugins.replace),
       ...baseConfig.plugins.preVue,
-      vue(baseConfig.plugins.vue),
+      vue({
+        css: true
+      }),
+      scss(),
       ...baseConfig.plugins.postVue,
       babel(baseConfig.plugins.babel),
       terser({
