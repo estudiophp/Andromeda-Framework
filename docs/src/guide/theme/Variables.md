@@ -29,6 +29,19 @@
 
 ## Spaces
 
+### Positions
+
+| Key    |
+| ------ |
+| left   |
+| right |
+| top  |
+| bottom |
+| vertical  |
+| horizontal  |
+
+### Sizes
+
 | Key    | Default Value |
 | ------ | ------------- |
 | xxsmall  | .3rem          |
