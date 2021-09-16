@@ -31,6 +31,8 @@
 
 | Key    | Default Value |
 | ------ | ------------- |
+| xxsmall  | .3rem          |
+| xsmall  | .5rem          |
 | small  | 1rem          |
 | medium | 2rem          |
 | large  | 3rem          |
@@ -69,6 +71,7 @@
 | medium | 24px         |
 | large  | 32px         |
 | extra  | 42px         |
+| default| 13.3333px    |
 
 ### Weight
 
