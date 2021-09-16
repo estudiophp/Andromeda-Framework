@@ -14,7 +14,8 @@ import {
   FluCardSection,
   FluLink,
   FluOverlay,
-  FluTable
+  FluTable,
+  FluPivot
 } from "@/controllers";
 
 export default defineComponent({
@@ -33,7 +34,8 @@ export default defineComponent({
     FluCardSection,
     FluLink,
     FluOverlay,
-    FluTable
+    FluTable,
+    FluPivot
   },
   data: () => ({
     checkModel: "",
@@ -141,7 +143,11 @@ export default defineComponent({
       <flu-list-item>
         <h3>Lorem, ipsum dolor.</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
         </p>
       </flu-list-item>
     </flu-list>
@@ -171,5 +177,27 @@ export default defineComponent({
         </tr>
       </template>
     </flu-table>
+    <flu-pivot
+      class="margin-vertical-small"
+      default-active="first"
+      :tabs="[
+        {
+          label: 'First tab',
+          id: 'first'
+        },
+        {
+          label: 'Second tab',
+          id: 'second2'
+        },
+      ]"
+    >
+      <template #first>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur cupiditate et fugiat modi perferendis quis ut, vel. Blanditiis commodi in iste nobis non placeat quo repellat, saepe sequi tempore!
+      </template>
+
+      <template #second2>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, rerum.
+      </template>
+    </flu-pivot>
   </div>
 </template>
