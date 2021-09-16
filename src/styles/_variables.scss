@@ -58,6 +58,13 @@ $border-width: (
   5: 5px
 );
 
+$border-positions: (
+  top: top,
+  bottom: bottom,
+  left: left,
+  right: right
+);
+
 $border-radius: (
   "small": .25rem,
   "medium": .2rem,
