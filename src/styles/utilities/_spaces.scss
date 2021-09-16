@@ -4,12 +4,12 @@
     margin: $size;
   }
 
-  .margin-y-#{$key} {
+  .margin-vertical-#{$key} {
     @extend .margin-top-#{$key};
     @extend .margin-bottom-#{$key};
   }
 
-  .margin-x-#{$key} {
+  .margin-horizontal-#{$key} {
     @extend .margin-right-#{$key};
     @extend .margin-left-#{$key};
   }
