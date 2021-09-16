@@ -3,7 +3,7 @@
     <div @click="handleClickActivator">
       <slot name="activator" />
     </div>
-    <div @click=handleClickActivator class="dropdown" v-show="isShow">
+    <div @click="handleClickActivator" class="dropdown" v-show="isShow">
       <slot name="content" />
     </div>
   </div>
