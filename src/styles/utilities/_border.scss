@@ -2,6 +2,12 @@
   border-style: solid;
 }
 
+@each $key, $position in $border-positions {
+  .border-position-#{$key} {
+    border-#{$position}-style: solid;
+  }
+}
+
 @each $key, $size in $border-width {
   .border-width-#{$key} {
     border-width: $size;
