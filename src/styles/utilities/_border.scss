@@ -3,14 +3,19 @@
 }
 
 @each $key, $position in $border-positions {
-  .border-position-#{$key} {
+  .border-#{$key} {
     border-#{$position}-style: solid;
   }
 }
 
-@each $key, $size in $border-width {
-  .border-width-#{$key} {
+@each $key-width, $size in $border-width {
+  .border-width-#{$key-width} {
     border-width: $size;
+  }
+  @each $key-position, $position in $border-positions {
+    .border-#{$key-position}-width-#{$key-width} {
+      border-#{$key-position}-width: $size;
+    }
   }
 }
 
@@ -20,14 +25,25 @@
   }
 }
 
-@each $key, $color in $theme-colors {
-  .border-color-#{$key} {
+@each $key-color, $color in $theme-colors {
+  .border-color-#{$key-color} {
     border-color: $color;
+  }
+  @each $key-position, $position in $border-positions {
+    .border-#{$key-position}-color-#{$key-color} {
+      border-#{$key-position}-color: $key-position;
+    }
   }
 }
 
-@each $key, $color in $grays {
-  .border-color-gray-#{$key} {
+@each $key-color, $color in $grays {
+  .border-color-gray-#{$key-color} {
     border-color: $color;
+  }
+
+  @each $key-position, $position in $border-positions {
+    .border-#{$key-position}-color-gray-#{$key-color} {
+      border-#{$key-position}-color: $color;
+    }
   }
 }
