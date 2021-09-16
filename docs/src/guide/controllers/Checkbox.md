@@ -1,4 +1,4 @@
-# Checbox
+# Checkbox
 
 ## Using
 
