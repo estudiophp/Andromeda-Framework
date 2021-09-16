@@ -13,7 +13,8 @@ import {
   FluCard,
   FluCardSection,
   FluLink,
-  FluOverlay
+  FluOverlay,
+  FluTable
 } from "@/controllers";
 
 export default defineComponent({
@@ -31,7 +32,8 @@ export default defineComponent({
     FluCard,
     FluCardSection,
     FluLink,
-    FluOverlay
+    FluOverlay,
+    FluTable
   },
   data: () => ({
     checkModel: "",
@@ -143,5 +145,31 @@ export default defineComponent({
         </p>
       </flu-list-item>
     </flu-list>
+    <flu-table>
+      <template #head>
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Sexo</th>
+        </tr>
+      </template>
+      <template #body>
+        <tr class="clickable">
+          <td>Joe doe</td>
+          <td>24</td>
+          <td>Masculino</td>
+        </tr>
+        <tr>
+          <td>Jane doe</td>
+          <td>21</td>
+          <td>Femenino</td>
+        </tr>
+        <tr>
+          <td>Baby doe</td>
+          <td>4</td>
+          <td>Masculino</td>
+        </tr>
+      </template>
+    </flu-table>
   </div>
 </template>
