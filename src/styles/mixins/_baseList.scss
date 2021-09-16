@@ -3,8 +3,8 @@
 }
 
 @mixin baseListItem() {
-  @extend .padding-y-small;
-  @extend .padding-x-small;
+  @extend .padding-vertical-small;
+  @extend .padding-horizontal-small;
   cursor: pointer;
   &:hover {
     background: $gray-100;

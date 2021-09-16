@@ -1,7 +1,7 @@
 @mixin button($color-key) {
   @extend .background-#{$color-key};
-  @extend .padding-y-xsmall;
-  @extend .padding-x-small;
+  @extend .padding-vertical-xsmall;
+  @extend .padding-horizontal-small;
   @extend .text-color-gray-white;
   @extend .text-weight-bold;
   @extend .border-radius-small;

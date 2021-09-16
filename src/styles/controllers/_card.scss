@@ -11,7 +11,7 @@
   }
 
   .card-section {
-    @extend .padding-x-small;
-    @extend .padding-y-small;
+    @extend .padding-horizontal-small;
+    @extend .padding-vertical-small;
   }
 }

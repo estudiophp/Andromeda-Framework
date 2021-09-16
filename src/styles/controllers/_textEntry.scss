@@ -1,8 +1,8 @@
 .textEntry {
   @extend .border;
   @extend .border-radius-small;
-  @extend .padding-y-xsmall;
-  @extend .padding-x-xsmall;
+  @extend .padding-vertical-xsmall;
+  @extend .padding-horizontal-xsmall;
   border-color: $gray-600;
   border-width: 1.6px;
   cursor: pointer;
