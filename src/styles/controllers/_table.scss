@@ -1,0 +1,30 @@
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table {
+  @extend .text-align-left;
+  @extend .text-size-default;
+  border-collapse: collapse;
+  width: 100%;
+  border-spacing: 0;
+  tr {
+    &.clickable:hover {
+      background: $gray-100;
+      cursor: pointer;
+    }
+
+    th {
+      @extend .text-weight-bold
+    }
+
+    th, td {
+      @extend .border-bottom;
+      @extend .border-bottom-width-1;
+      @extend .border-bottom-color-gray-300;
+      @extend .padding-vertical-small;
+      @extend .padding-right-small;
+      min-width: 200px;
+    }
+  }
+}

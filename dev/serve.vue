@@ -13,7 +13,8 @@ import {
   FluCard,
   FluCardSection,
   FluLink,
-  FluOverlay
+  FluOverlay,
+  FluTable
 } from "@/controllers";
 
 export default defineComponent({
@@ -31,7 +32,8 @@ export default defineComponent({
     FluCard,
     FluCardSection,
     FluLink,
-    FluOverlay
+    FluOverlay,
+    FluTable
   },
   data: () => ({
     checkModel: "",
@@ -84,10 +86,10 @@ export default defineComponent({
     >
     </flu-combo-box>
     <flu-dropdown class="margin-top-small">
-      <template v-slot:activator>
+      <template #activator>
         <flu-btn color="primary">Activator Dropdown</flu-btn>
       </template>
-      <template v-slot:content>
+      <template #content>
         <flu-list>
           <flu-list-item>Item 01</flu-list-item>
         </flu-list>
@@ -135,5 +137,39 @@ export default defineComponent({
         </flu-card-section>
       </flu-card>
     </flu-overlay>
+    <flu-list class="margin-vertical-small text-size-default">
+      <flu-list-item>
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </flu-list-item>
+    </flu-list>
+    <flu-table>
+      <template #head>
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Sexo</th>
+        </tr>
+      </template>
+      <template #body>
+        <tr class="clickable">
+          <td>Joe doe</td>
+          <td>24</td>
+          <td>Masculino</td>
+        </tr>
+        <tr>
+          <td>Jane doe</td>
+          <td>21</td>
+          <td>Femenino</td>
+        </tr>
+        <tr>
+          <td>Baby doe</td>
+          <td>4</td>
+          <td>Masculino</td>
+        </tr>
+      </template>
+    </flu-table>
   </div>
 </template>
