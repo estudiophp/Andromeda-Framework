@@ -42,7 +42,8 @@ export default {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| options | Array | Set options for choices |
-| defaultValue | String | Value to set as default |
-| name | String | Set name for choice group |
+| label | String | Label for entry |
+| options | Array | Options for entry |
+| placeholder | String | Placeholder for entry |
+| block | Boolean | Set block width |
 | readonly | Boolean | Enable readonly for choice group |
