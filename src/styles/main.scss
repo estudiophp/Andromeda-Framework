@@ -1,5 +1,4 @@
 @import "variables";
-@import "global";
 
 // Utilities
 @import "utilities/background";
@@ -24,3 +23,5 @@
 @import "controllers/card";
 @import "controllers/link";
 @import "controllers/overlay";
+
+@import "global";
