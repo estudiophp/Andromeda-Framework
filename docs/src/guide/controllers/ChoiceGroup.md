@@ -26,9 +26,15 @@
 
 <script>
 import {FluChoiceGroup} from '@estudiophp/fluvue-framework'
+import {ref} from 'vue'
 
 export default {
-  components: {FluChoiceGroup}
+  components: {FluChoiceGroup},
+  setup() {
+    const choiceModel = ref('')
+    
+    return {choiceModel}
+  }
 }
 </script>
 ```
