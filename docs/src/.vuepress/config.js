@@ -63,6 +63,7 @@ module.exports = {
           children: [
             'controllers/Button',
             'controllers/Checkbox',
+            'controllers/ChoiceGroup',
           ]
         },
       ],
