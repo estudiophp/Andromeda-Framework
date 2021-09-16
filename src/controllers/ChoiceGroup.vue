@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label class="choice-group-item margin-y-xsmall" v-for="item of options" :key="item">
+    <label class="choice-group-item margin-vertical-xsmall" v-for="item of options" :key="item">
       <input :name="name" hidden type="radio" :value="item.value" @change="(e) => updateValue(e)">
       <div
         class="checkmark"

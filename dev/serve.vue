@@ -99,7 +99,7 @@ export default defineComponent({
       type="text"
       placeholder="Escriba su email"
     />
-    <flu-card class="margin-y-small">
+    <flu-card class="margin-vertical-small">
       <flu-card-section>
         <h3>Lorem, ipsum dolor.</h3>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus fuga ipsum, eligendi animi magni alias
