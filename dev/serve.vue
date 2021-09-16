@@ -84,10 +84,10 @@ export default defineComponent({
     >
     </flu-combo-box>
     <flu-dropdown class="margin-top-small">
-      <template v-slot:activator>
+      <template #activator>
         <flu-btn color="primary">Activator Dropdown</flu-btn>
       </template>
-      <template v-slot:content>
+      <template #content>
         <flu-list>
           <flu-list-item>Item 01</flu-list-item>
         </flu-list>
