@@ -32,12 +32,12 @@
     padding: $size;
   }
 
-  .padding-y-#{$key} {
+  .padding-vertical-#{$key} {
     @extend .padding-top-#{$key};
     @extend .padding-bottom-#{$key};
   }
 
-  .padding-x-#{$key} {
+  .padding-horizontal-#{$key} {
     @extend .padding-right-#{$key};
     @extend .padding-left-#{$key};
   }
