@@ -61,7 +61,8 @@ module.exports = {
           title: 'Controllers',
           collapsable: false,
           children: [
-            'controllers/Button'
+            'controllers/Button',
+            'controllers/Checkbox',
           ]
         },
       ],
