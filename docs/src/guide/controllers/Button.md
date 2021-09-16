@@ -1,22 +1,28 @@
 # Button
+
 ## Using
+
 ![](../../assets/ButtonScreenshot.png)
+
 ```vue
+
 <template>
-    <flu-button color="primary">
-        Button
-    </flu-button>
+  <flu-button color="primary">
+    Button
+  </flu-button>
 </template>
 
 <script>
 import {FluButton} from '@estudiophp/fluvue-framework'
 
 export default {
-    components: {FluButton}
+  components: {FluButton}
 }
 </script>
 ```
+
 ## API
+
 | Property | Type | Description |
 | --- | --- | --- |
 | color | String | Set component color |
