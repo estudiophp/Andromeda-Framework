@@ -1,0 +1,27 @@
+.pivot {
+  //all: unset;
+  .pivot-nav {
+    @extend .text-size-default;
+    @extend .text-weight-bold;
+    display: flex;
+
+    .pivot-nav-item {
+      @extend .margin-right-small;
+      @extend .border-bottom;
+      @extend .border-width-2;
+      border-color: transparent;
+      @extend .padding-vertical-xsmall;
+      cursor: pointer;
+
+      &.active, &:hover {
+        @extend .border-color-primary;
+      }
+    }
+
+  }
+
+  .pivot-content {
+    @extend .padding-vertical-small;
+    @extend .text-size-default;
+  }
+}
