@@ -21,3 +21,9 @@
     color: $color;
   }
 }
+
+@each $key, $align in $text-align {
+  .text-align-#{$key} {
+    text-align: $align;
+  }
+}
