@@ -64,6 +64,7 @@ module.exports = {
             'controllers/Button',
             'controllers/Checkbox',
             'controllers/ChoiceGroup',
+            'controllers/ComboBox',
           ]
         },
       ],
